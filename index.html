@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bryan Wilson - Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            color: #222;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 5px;
+            color: white;
+            background: #007BFF;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .button:hover {
+            background: #0056b3;
+        }
+        iframe {
+            width: 100%;
+            height: 110vh;
+            border: none;
+            margin-bottom: 20px;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .project-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Bryan Wilson</h1>
+    <img src="image.jpeg" alt="Bryan Wilson">
+
+    <h2>Resume</h2>
+    <iframe src="resume.pdf"></iframe>
+    <a href="resume.pdf" download class="button">Download Resume</a>
+
+    <h2>Cover Letter</h2>
+    <p style="text-align: left; line-height: 1.6;">Dear Hiring Manager,</p>
+    <p style="text-align: left; line-height: 1.6;">I am excited to apply for the Software Engineer Internship position at [Company Name]. This opportunity aligns perfectly with my skills and aspirations as a computer science major at Brigham Young University - Idaho. My passion for problem-solving and creating impactful software solutions has driven me to develop innovative projects both academically and independently.</p>
+    <p style="text-align: left; line-height: 1.6;">One of my notable projects, ChoreTime, is a web app I designed to help my family manage household chores more efficiently than traditional pen-and-paper methods. With no prior experience in JavaScript frameworks, I challenged myself to build the app using Vue.js for the frontend, Node.js for the backend, and Supabase as the PostgreSQL database. I implemented features like real-time updates and modular state management with Pinia, ensuring a seamless user experience while expanding my technical expertise.</p>
+    <p style="text-align: left; line-height: 1.6;">During my sophomore year, I also led a hackathon-winning team to develop GPTeacher, an AI-powered web app aimed at improving note-taking and studying. The app utilized OCR technology to digitize student notes, which were then sent to a Flask RESTful API. Using OpenAI’s API, I transformed the notes into organized flashcards, responding to the app’s requests with JSON. This project showcased my ability to identify problems, innovate solutions, and integrate cutting-edge technologies effectively and quickly.</p>
+    <p style="text-align: left; line-height: 1.6;">While I am not yet proficient in Java or machine learning, I am always ready to learn and broaden my technical toolkit. My curiosity and adaptability have enabled me to quickly master tools and frameworks in the past, and I am confident I can bring the same enthusiasm to learning the technologies utilized at [Company Name].</p>
+    <p style="text-align: left; line-height: 1.6;">Beyond my technical skills, I value teamwork and communication as essential components of success in a dynamic environment like [Company Name]’s. When I’m not coding or gaming, I enjoy skiing, hiking with my wife, and cheering on college football teams. These activities reflect my love for challenges and exploration, both of which I bring to my professional endeavors.</p>
+    <p style="text-align: left; line-height: 1.6;">I am excited about the opportunity to contribute to [Company Name]’s mission of leveraging big data and natural language processing to solve complex problems. Thank you for considering my application. I would be thrilled to discuss how my skills and experiences align with the needs of your team.</p>
+
+    <p style="text-align: left; line-height: 1.6;">Sincerely, <br> Bryan Wilson</p>
+
+    <h2>Elevator Pitch</h2>
+    <p style="font-style: italic;">Hello, my name is Bryan Wilson, and I’m a computer science major driven by a passion for solving problems through code. I thrive on learning and adapting, with a portfolio of projects that showcase my ability to turn challenges into solutions. Whether it’s picking up a new programming language or mastering a framework, I’m always eager to dive in, learn quickly, and contribute . I bring enthusiasm, technical versatility, and a team-focused mindset to everything I do.</p>
+
+    <h2>Reference Sheet</h2>
+    <iframe src="references.pdf#page=2"></iframe>
+    <a href="references.pdf" download class="button">Download Reference Sheet</a>
+
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="project-card"><a href="https://portfolium.com/entry/silver-lining" target="_blank">Silver Lining</a></div>
+        <div class="project-card"><a href="https://portfolium.com/entry/gpteacher" target="_blank">GPTeacher</a></div>
+        <div class="project-card"><a href="https://portfolium.com/entry/vue-js-learning" target="_blank">Vue.js Learning</a></div>
+        <div class="project-card"><a href="https://portfolium.com/entry/instagram-clone" target="_blank">Instagram Clone</a></div>
+        <div class="project-card"><a href="https://portfolium.com/entry/chore-time" target="_blank">Chore Time</a></div>
+    </div>
+</div>
+</body>
+</html>
