@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bryan Wilson - Portfolio</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -20,11 +22,40 @@
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
+        img {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            color: #222;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 5px;
+            color: white;
+            background: #007BFF;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .button:hover {
+            background: #0056b3;
+        }
+        iframe {
+            width: 100%;
+            height: 110vh;
+            border: none;
+            margin-bottom: 20px;
+        }
         .projects {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 15px;
             margin-top: 20px;
+            margin-bottom: 150px;
+            z-index: 8;
         }
         .project-card {
             position: relative;
@@ -34,6 +65,8 @@
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
             cursor: pointer;
             transition: transform 0.2s, box-shadow 0.2s;
+            z-index: 10;
+
         }
         .project-card:hover {
             transform: translateY(-5px);
@@ -51,7 +84,7 @@
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
             width: 220px;
             text-align: left;
-            z-index: 10;
+            z-index: 999;
         }
         .project-card:hover .modal {
             display: block;
@@ -60,23 +93,69 @@
             text-decoration: none;
             color: #333;
             font-weight: bold;
+            z-index: 10;
         }
         .project-card a:hover {
+            color: #007BFF;
+        }
+        p {
+            text-align: left;
+            line-height: 1.6;
+        }
+        .social-links {
+            margin-top: 30px;
+        }
+        .social-links a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 10px;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
             color: #007BFF;
         }
     </style>
 </head>
 <body>
 <div class="container">
+    <h1>Bryan Wilson</h1>
+    <img src="image.jpeg" alt="Bryan Wilson">
+
+    <!-- Resume Section -->
+    <h2>Resume</h2>
+    <iframe src="resume.pdf"></iframe>
+    <a href="resume.pdf" download class="button">Download Resume</a>
+
+    <!-- Cover Letter Section -->
+    <h2>Cover Letter</h2>
+    <p>Dear Hiring Manager,</p>
+    <p>I am excited to apply for the Software Engineer Internship position at [Company Name]. This opportunity aligns perfectly with my skills and aspirations as a computer science major at Brigham Young University - Idaho. My passion for problem-solving and creating impactful software solutions has driven me to develop innovative projects both academically and independently.</p>
+    <p>One of my notable projects, ChoreTime, is a web app I designed to help my family manage household chores more efficiently than traditional pen-and-paper methods. With no prior experience in JavaScript frameworks, I challenged myself to build the app using Vue.js for the frontend, Node.js for the backend, and Supabase as the PostgreSQL database. I implemented features like real-time updates and modular state management with Pinia, ensuring a seamless user experience while expanding my technical expertise.</p>
+    <p>During my sophomore year, I also led a hackathon-winning team to develop GPTeacher, an AI-powered web app aimed at improving note-taking and studying. The app utilized OCR technology to digitize student notes, which were then sent to a Flask RESTful API. Using OpenAI’s API, I transformed the notes into organized flashcards, responding to the app’s requests with JSON. This project showcased my ability to identify problems, innovate solutions, and integrate cutting-edge technologies effectively and quickly.</p>
+    <p>While I am not yet proficient in Java or machine learning, I am always ready to learn and broaden my technical toolkit. My curiosity and adaptability have enabled me to quickly master tools and frameworks in the past, and I am confident I can bring the same enthusiasm to learning the technologies utilized at [Company Name].</p>
+    <p>Beyond my technical skills, I value teamwork and communication as essential components of success in a dynamic environment like [Company Name]’s. When I’m not coding or gaming, I enjoy skiing, hiking with my wife, and cheering on college football teams. These activities reflect my love for challenges and exploration, both of which I bring to my professional endeavors.</p>
+    <p>I am excited about the opportunity to contribute to [Company Name]’s mission of leveraging big data and natural language processing to solve complex problems. Thank you for considering my application. I would be thrilled to discuss how my skills and experiences align with the needs of your team.</p>
+    <p>Sincerely, <br> Bryan Wilson</p>
+
+    <!-- Elevator Pitch Section -->
+    <h2>Elevator Pitch</h2>
+    <p style="font-style: italic;">Hello, my name is Bryan Wilson, and I’m a computer science major driven by a passion for solving problems through code. I thrive on learning and adapting, with a portfolio of projects that showcase my ability to turn challenges into solutions. Whether it’s picking up a new programming language or mastering a framework, I’m always eager to dive in, learn quickly, and contribute. I bring enthusiasm, technical versatility, and a team-focused mindset to everything I do.</p>
+
+    <!-- Reference Sheet Section -->
+    <h2>Reference Sheet</h2>
+    <iframe src="references.pdf#page=2"></iframe>
+    <a href="references.pdf" download class="button">Download Reference Sheet</a>
+
+    <!-- Projects Section -->
     <h2>Projects</h2>
     <div class="projects">
         <!-- Project 1 -->
         <div class="project-card">
             <a href="https://portfolium.com/entry/silver-lining" target="_blank">Silver Lining</a>
             <div class="modal">
-                <p><strong>Description:</strong> A gratitude social media app.</p>
-                <p><strong>Technologies:</strong> Expo, React Native, FireBase</p>
-                <p><strong>Key Features:</strong> Use of Camera, FireBase Storage, Auth</p>
+                <p><strong>Description:</strong> An offline-first photo storage app.</p>
+                <p><strong>Technologies:</strong> Expo, React Native, SQLite.</p>
             </div>
         </div>
 
@@ -86,8 +165,6 @@
             <div class="modal">
                 <p><strong>Description:</strong> AI-powered note-taking assistant.</p>
                 <p><strong>Technologies:</strong> Flask, OpenAI API, Vue.js.</p>
-                <p><strong>Key Features:</strong> Created a Resful API using python</p>
-
             </div>
         </div>
 
@@ -97,7 +174,6 @@
             <div class="modal">
                 <p><strong>Description:</strong> A collection of Vue.js experiments and tutorials.</p>
                 <p><strong>Technologies:</strong> Vue.js, Pinia, Supabase.</p>
-                <p><strong>Key Features:</strong> Learned to use Pinia for App wide state storage, connected with Supabase</p>
             </div>
         </div>
 
@@ -106,9 +182,7 @@
             <a href="https://portfolium.com/entry/instagram-clone" target="_blank">Instagram Clone</a>
             <div class="modal">
                 <p><strong>Description:</strong> A social media clone for learning full-stack development.</p>
-                <p><strong>Technologies:</strong>Vue.js.</p>
-                <p><strong>Key Features:</strong> Supabase connection</p>
-
+                <p><strong>Technologies:</strong> Firebase, Firestore, Vue.js.</p>
             </div>
         </div>
 
@@ -120,6 +194,16 @@
                 <p><strong>Technologies:</strong> Vue.js, Node.js, Supabase.</p>
             </div>
         </div>
+    </div>
+
+    <!-- Social Links Section -->
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/imbryanwilson/" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/BBopsCode" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
     </div>
 </div>
 </body>
